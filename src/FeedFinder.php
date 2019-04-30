@@ -3,14 +3,14 @@
 namespace Imelgrat {
 
     /**
-     * FeedFinder
+     * feed-finder
      * This class can be used to extract the URLs of RSS (1.0 and 2.0) and ATOM feeds associated to a page, as well as OPML outline documents.
      *
      * The class retrieves a given page (using cURL) and parses its head section to obtain the list of associated RSS, ATOM and OPML links.
      * The URLs of the available links are returned in an array, if any.
      * Before attempting to retrieve the specified page, the class can check the site's robots.txt file first to see if it is allowed to crawl the site pages.
      *
-     * @package FeedFinder
+     * @package feed-finder
      * @copyright 2018
      * @author    Ivan Melgrati, ported by Patrick Savalle to PHP 7.x
      * @link https://imelgrat.me
