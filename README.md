@@ -28,7 +28,7 @@ The recommended installation method is through
 ```json
 {
     "require": {
-        "imelgrat/feed-finder": "*"
+        "patricksavalle/feed-finder": "*"
     }
 }
 ```
