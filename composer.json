@@ -1,7 +1,7 @@
 {
   "name": "patricksavalle/feed-finder",
   "type": "library",
-  "version": "v1.0",
+  "version": "v3.0",
   "description": "A PHP class for extracting the URLs of RSS (1.0 and 2.0) and ATOM feeds associated to a page, as well as OPML outline documents.",
   "keywords": [
     "php",
