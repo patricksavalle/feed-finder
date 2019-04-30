@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Imelgrat {
 
     /**
@@ -43,7 +45,6 @@ namespace Imelgrat {
          * @param string $url URL to fetch feeds from
          * @param string $useragent User Agent to use during robots.txt and feed fetching operations
          * @param boolean $obey_robots Defines whether to obey robots.txt directives during discovery operations.
-         * @return FeedFinder
          */
         function __construct(string $url = '', string $useragent = 'Googlebot', bool $obey_robots = true)
         {
@@ -82,9 +83,9 @@ namespace Imelgrat {
         /**
          * Get whether to obey robots.txt directives during discovery operations.
          *
-         * @return string Whether to obey robots.txt directives during discovery operations.
+         * @return bool Whether to obey robots.txt directives during discovery operations.
          */
-        public function getObeyRobots(): string
+        public function getObeyRobots(): bool
         {
             return $this->obey_robots;
         }
@@ -122,7 +123,7 @@ namespace Imelgrat {
         /**
          * Set whether to obey robots.txt directives during discovery operations.
          *
-         * @param string $obey_robots Whether to obey robots.txt directives during discovery operations.
+         * @param bool $obey_robots Whether to obey robots.txt directives during discovery operations.
          * @return FeedFinder
          */
         public function setObeyRobots(bool $obey_robots = true): FeedFinder
@@ -135,11 +136,12 @@ namespace Imelgrat {
         /**
          * Fetch Contents from URL. Uses cURL, with file_get_contents() fallback
          *
+         * @param string the url to fetch
          * @return string
          */
-        protected function fetchURL(): string
+        protected function fetchURL($url): string
         {
-            return file_get_contents($this->getURL(), false);
+            return file_get_contents($url);
         }
 
         /**
@@ -229,7 +231,7 @@ namespace Imelgrat {
         /**
          * Get an array of RSS, ATOM and OPML links by parsing HTML
          *
-         * @return string Array
+         * @return array
          */
         function getFeeds(): array
         {
