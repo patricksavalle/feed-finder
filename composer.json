@@ -11,6 +11,11 @@
             "name": "Ivan Melgrati",
             "homepage": "http://imelgrat.me",
             "role": "Developer"
+        },
+        {
+            "name": "Patrick Savalle",
+            "homepage": "https://github.com/patricksavalle",
+            "role": "Developer"
         }
     ],
     "autoload": {
@@ -21,9 +26,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=5.3.0"
-    },
-    "require-dev": {
-        "phpdocumentor/phpdocumentor": "*"
+        "php": ">=7.0"
     }
 }

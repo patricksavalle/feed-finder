@@ -14,7 +14,7 @@ Developed by [Ivan Melgrati](https://imelgrat.me)
 Requirements
 ------------
 
-*   PHP >= 5.3.0
+*   PHP >= 7.1
 
 Installation
 ------------
@@ -38,7 +38,7 @@ be found over at [Packagist](http://packagist.org).
 
 ### Manually
 
-1.  Copy `src/feed-finder.php` to your codebase, perhaps to the `vendor`
+1.  Copy `src/FeedFinder.php` to your codebase, perhaps to the `vendor`
     directory.
 2.  Add the `FeedFinder` class to your autoloader or `require` the file directly.
 
