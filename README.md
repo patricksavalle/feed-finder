@@ -9,7 +9,7 @@ FeedFinder
 
 A PHP class for extracting the URLs of RSS (1.0 and 2.0) and ATOM feeds associated to a page, as well as OPML outline documents. 
 
-Developed by [Ivan Melgrati](https://imelgrat.me) 
+Developed by [Ivan Melgrati](https://imelgrat.me), modified by Patrick Savalle 
 
 Requirements
 ------------
