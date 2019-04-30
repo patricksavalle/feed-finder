@@ -259,7 +259,9 @@ namespace Imelgrat {
 
                     // Parse all <link> tags and extract attributes using a regular expression.
                     foreach ($links as $row) {
-                        preg_match_all('/([a-z0-9_\:\-]*)\s*?=\s*?([`\'"]?)(.*?)\2\s+/mi', $row, $attributes, PREG_SET_ORDER, 0);
+                        var_dump($row);
+                        preg_match_all('/([a-z0-9_\:\-]*)\s*?=\s*?([\'"]?)([^\'"]*)([\'"]?)\s*/mi', $row, $attributes, PREG_SET_ORDER, 0);
+                        var_dump($attributes);
                         $final_link = [];
                         foreach ($attributes as $attribute) {
                             if (isset($attribute[1])) {
@@ -283,6 +285,7 @@ namespace Imelgrat {
                             }
                             if (!$href and strtolower($test_link['type']) == 'application/atom+xml') {
                                 // Find ATOM feeds
+                                print_r($test_link);
                                 $href = $test_link['href'];
                             }
 
